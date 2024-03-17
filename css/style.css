@@ -1,0 +1,162 @@
+:root {
+  --primary: #cb9898;
+  --bg: #352a2a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Merriweather", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+  /* min-height: 2000px; */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(53, 42, 42, 0.8);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navbar .navbar-logo span {
+  color: rgb(234, 6, 6);
+}
+
+.navbar .navbar-nav a {
+  color: #f0dada;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: rgb(234, 6, 6);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+}
+
+.navbar .navbar-extra a:hover {
+  color: rgb(234, 6, 6);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Seksi pahlawan */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  padding: 10rem 7% 1.4rem;
+  /* align-items: end; */
+  background-image: url("../img/dcdc.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .content {
+  padding: 1.4rem 0%;
+  /* max-width: 60rem; */
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: #c71313;
+  text-shadow: 2px 2px 4px rgba(207, 177, 177, 0.814);
+  line-height: 1.2;
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  margin-top: 5rem;
+  color: #f1cec8;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(1 1 3 0.5);
+}
+
+.hero .content img {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-right: 2rem;
+  align-items: center;
+}
+
+footer {
+  background-color: rgba(234, 6, 6, 0.5);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: #fffcfc;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 80%;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgb(253, 253, 253, 0.9);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.5s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #352a2a;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+}
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 60%;
+  }
+}
